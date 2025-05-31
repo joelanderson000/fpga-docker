@@ -18,7 +18,8 @@
 #TOOLS += Lattice_iCEcube2
 #TOOLS += Xilinx_ISE_14.7
 
-DIRS=fpga-base/centos6 $(TOOLS)
+#DIRS=fpga-base/centos6 $(TOOLS)
+DIRS=fpga-base/debian $(TOOLS)
 
 ALLDIRS=Altera* Intel* Lattice* Xilinx* fpga-base/*
 # ALLDIRS=Altera_Quartus_II_13.0sp1 Altera_Quartus_II_13.1

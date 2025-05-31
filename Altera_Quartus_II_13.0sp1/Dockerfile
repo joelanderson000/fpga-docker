@@ -1,9 +1,9 @@
-FROM fpga-base:centos6 as install
+FROM fpga-base:debian as install
 LABEL com.halfmanhalftaco.fpga.temp=1
 ADD Quartus-web-13.0.1.232-linux.tar /quartus
 RUN mkdir -p /opt/quartus && /quartus/setup.sh --mode unattended --installdir /opt/quartus
 
-FROM fpga-base:centos6
+FROM base-images:debian
 COPY --from=install /opt/quartus /opt/quartus
 CMD ["/opt/quartus/quartus/bin/quartus", "--64bit"]
 ARG TOOL
