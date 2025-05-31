@@ -35,6 +35,6 @@ container-image-built: $(FILES)
 clean:
 	docker rm ise-install &>/dev/null || true
 	docker rmi ise-install:latest ise:14.7 &>/dev/null || true
-	sudo umount /dev/nbd0p1 >&/dev/null || true
-	sudo qemu-nbd -d /dev/nbd0 >&/dev/null || true
+	sudo umount /dev/nbd0p1 &>/dev/null || true
+	sudo qemu-nbd -d /dev/nbd0 &>/dev/null || true
 	rm -f container-image-built

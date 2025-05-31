@@ -9,5 +9,5 @@ container-image-built: Dockerfile
 
 .PHONY: clean
 clean:
-	docker rmi $(TAG) >&/dev/null || true
+	docker rmi $(TAG) &>/dev/null || true
 	rm -f container-image-built

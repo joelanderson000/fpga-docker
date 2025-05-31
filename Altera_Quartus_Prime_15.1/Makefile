@@ -22,7 +22,7 @@ container-image-built: $(FILES)
 
 .PHONY: clean
 clean:
-	docker rmi fpga:$(TOOL) >&/dev/null || true
+	docker rmi fpga:$(TOOL) &>/dev/null || true
 	@docker rmi $$(docker images --filter "label=com.halfmanhalftaco.fpga.temp" -q)
 	@docker rmi $$(docker images --filter "label=com.halfmanhalftaco.fpga.tool=$(TOOL)" -q)
 	rm -f container-image-built

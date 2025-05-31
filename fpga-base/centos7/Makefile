@@ -7,5 +7,5 @@ container-image-built: Dockerfile
 
 .PHONY: clean
 clean:
-	docker rmi fpga-base:centos7 >&/dev/null || true
+	docker rmi fpga-base:centos7 &>/dev/null || true
 	rm -f container-image-built
