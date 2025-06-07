@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 list_tools () {
     echo "Available tools:"
     docker images --filter "label=com.halfmanhalftaco.fpga.tool" --format "{{.Tag}}" | sort
@@ -9,7 +8,11 @@ list_tools () {
 tool=$1
 shift
 
-[ -z "$tool" ] && (list_tools; exit)
+if [ -z "$tool" ]; then
+	echo "Usage: $0 <tool>"
+	list_tools
+	exit
+fi
 
 container_id=$(docker images --filter="label=com.halfmanhalftaco.fpga.tool=$tool" --format "{{.ID}}")
 if [ -z "$container_id" ]; then

@@ -1,6 +1,6 @@
 # Comment out the ones you don't want.
 
-#TOOLS += Altera_Quartus_II_13.0sp1
+TOOLS += Altera_Quartus_II_13.0sp1
 #TOOLS += Altera_Quartus_II_13.1
 #TOOLS += Altera_Quartus_II_14.0
 #TOOLS += Altera_Quartus_II_14.1
