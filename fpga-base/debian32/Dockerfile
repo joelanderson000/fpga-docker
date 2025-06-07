@@ -30,6 +30,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 ADD ./libpng /libpng-installer
 RUN cd /libpng-installer && \
     DEBIAN_FRONTEND=noninteractive apt install -y ./libpng12-0_1.2.54-6_i386.deb
+
+ADD 92-usbblaster.rules /lib/udev/rules.d/92-usbblaster.rules
     
 ADD fpga /usr/local/sbin/fpga
 ENTRYPOINT ["/usr/local/sbin/fpga"]
