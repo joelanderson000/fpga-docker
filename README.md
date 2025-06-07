@@ -8,6 +8,11 @@ The motivation for this project was to avoid having to install a bunch
 of system-wide dependencies since most of these tools require 32-bit
 libraries to run.
 
+## Additions in this Fork
+* Reconfigured Quartus II 13.0 sp1 with debian base image
+* Created 32bit variant due to quartus compiler issues on the 64 bit version
+
+
 ## Recent changes:
 
 * 2021-08-24
